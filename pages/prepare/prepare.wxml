@@ -11,7 +11,7 @@
   
   <view class="content-wrapper">
     <view class="message">
-      请将手机交给猜词者，点击"开始游戏"按钮后将显示词语
+      请将手机交给提示者，点击"开始游戏"按钮后将显示词语
     </view>
     
     <view class="settings-card">
@@ -61,8 +61,6 @@
   <view class="countdown-mask" wx:if="{{showCountdown}}">
     <view class="countdown-container">
       <view class="countdown-title">准备开始</view>
-      <view class="countdown-number">{{countdown}}</view>
-      <view class="countdown-tips">请将手机交给猜词者，并将屏幕朝上</view>
-    </view>
+      <view class="countdown-number">{{countdown}}</view>    </view>
   </view>
 </view> 
