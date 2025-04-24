@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="custom-navbar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <view class="navbar-title">准备游戏</view>
+    <view class="placeholder"></view>
+  </view>
+  
+  <view class="title">准备开始</view>
+  
+  <view class="content-wrapper">
+    <view class="message">
+      请将手机交给猜词者，点击"开始游戏"按钮后将显示词语
+    </view>
+    
+    <view class="settings-card">
+      <view class="setting-item">
+        <view class="setting-label">游戏模式</view>
+        <view class="setting-value">休闲模式</view>
+      </view>
+      
+      <view class="setting-item">
+        <view class="setting-label">当前词库</view>
+        <view class="setting-value">{{libraryName}} ({{wordCount}}个词)</view>
+      </view>
+      
+      <view class="setting-item">
+        <view class="setting-label">游戏时间</view>
+        <view class="setting-value">{{gameTime}} 秒</view>
+        <view class="time-options">
+          <view class="time-option {{gameTime === 30 ? 'active' : ''}}" 
+                bindtap="selectGameTime" data-time="30">30秒</view>
+          <view class="time-option {{gameTime === 60 ? 'active' : ''}}" 
+                bindtap="selectGameTime" data-time="60">60秒</view>
+          <view class="time-option {{gameTime === 90 ? 'active' : ''}}" 
+                bindtap="selectGameTime" data-time="90">90秒</view>
+          <view class="time-option {{gameTime === 120 ? 'active' : ''}}" 
+                bindtap="selectGameTime" data-time="120">120秒</view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="tips-card">
+      <view class="subtitle">游戏提示</view>
+      <view class="tips-content">
+        <view>1. 猜词者请不要看手机屏幕</view>
+        <view>2. 提示者不能直接说出词语中的字</view>
+        <view>3. 猜对请点击左侧，猜错或跳过点击右侧</view>
+        <view>4. 时间结束后会显示游戏结果</view>
+      </view>
+    </view>
+    
+    <view class="btn-container">
+      <button class="btn-primary" bindtap="startCountdown">开始游戏</button>
+      <button class="btn-grey" bindtap="goBack">返回</button>
+    </view>
+  </view>
+  
+  <!-- 倒计时蒙层 -->
+  <view class="countdown-mask" wx:if="{{showCountdown}}">
+    <view class="countdown-container">
+      <view class="countdown-title">准备开始</view>
+      <view class="countdown-number">{{countdown}}</view>
+      <view class="countdown-tips">请将手机交给猜词者，并将屏幕朝上</view>
+    </view>
+  </view>
+</view> 

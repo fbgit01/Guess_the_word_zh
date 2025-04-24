@@ -1,7 +1,84 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    Weixin
+    <!-- 自定义导航栏 -->
+    <view class="custom-navbar">
+      <view class="placeholder"></view>
+      <view class="navbar-title">疯狂猜词</view>
+      <view class="placeholder"></view>
+    </view>
+    
+    <!-- 标题和LOGO区域 -->
+    <view class="logo-container">
+      <image class="logo" src="/images/game-logo.svg" mode="aspectFit"></image>
+      <view class="title-container">
+        <view class="title">疯狂猜词</view>
+        <view class="subtitle">休闲聚会必备神器</view>
+      </view>
+    </view>
+    
+    <!-- 主要内容区域：包含按钮和词库 -->
+    <view class="main-content">
+      <!-- 按钮区域 -->
+      <view class="btn-container">
+        <button class="btn-primary start-btn" bindtap="startGame">
+          <text class="btn-icon">▶</text>
+          <text>开始游戏</text>
+        </button>
+        <button class="btn-secondary rules-btn" bindtap="goToRules">
+          <text class="btn-icon">ℹ</text>
+          <text>游戏规则</text>
+        </button>
+      </view>
+      
+      <!-- 词库选择区域 -->
+      <view class="word-lib">
+        <view class="lib-header">
+          <view class="subtitle">词库选择</view>
+          <view class="lib-info">已选: {{selectedLibrary}} ({{libraryWordCount}}词)</view>
+        </view>
+        
+        <view class="lib-grid">
+          <view class="lib-item {{selectedLibrary === '流行文化' ? 'active' : ''}}" 
+                data-library="流行文化" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">📱</view>
+            <view>流行文化</view>
+          </view>
+          <view class="lib-item {{selectedLibrary === '影视动漫' ? 'active' : ''}}" 
+                data-library="影视动漫" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">🎬</view>
+            <view>影视动漫</view>
+          </view>
+          <view class="lib-item {{selectedLibrary === '网络流行语' ? 'active' : ''}}" 
+                data-library="网络流行语" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">💬</view>
+            <view>网络流行语</view>
+          </view>
+          <view class="lib-item {{selectedLibrary === '音乐潮流' ? 'active' : ''}}" 
+                data-library="音乐潮流" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">🎵</view>
+            <view>音乐潮流</view>
+          </view>
+          <view class="lib-item {{selectedLibrary === '游戏电竞' ? 'active' : ''}}" 
+                data-library="游戏电竞" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">🎮</view>
+            <view>游戏电竞</view>
+          </view>
+          <view class="lib-item {{selectedLibrary === '美食探店' ? 'active' : ''}}" 
+                data-library="美食探店" 
+                bindtap="selectLibrary">
+            <view class="lib-icon">🍔</view>
+            <view>美食探店</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="copyright">©2025 疯狂猜词 版权所有</view>
   </view>
 </scroll-view>

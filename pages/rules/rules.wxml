@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="custom-navbar">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+    </view>
+    <view class="navbar-title">游戏规则</view>
+    <view class="placeholder"></view>
+  </view>
+  
+  <view class="title">游戏规则</view>
+  
+  <view class="rules-card">
+    <view class="subtitle">基本规则</view>
+    <view class="rule-item">
+      <view class="rule-num">1</view>
+      <view class="rule-text">游戏需要至少两名玩家参与，一名为猜词者，其他为提示者</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">2</view>
+      <view class="rule-text">提示者手持设备，屏幕上显示需要猜的词语，但猜词者看不到</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">3</view>
+      <view class="rule-text">提示者通过语言或肢体动作描述该词语，但不能直接说出词语或其中的字</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">4</view>
+      <view class="rule-text">猜词者需在规定时间内根据描述猜出词语</view>
+    </view>
+  </view>
+  
+  <view class="rules-card">
+    <view class="subtitle">操作方式</view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">猜对词语：猜词者点击屏幕左半区域</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">猜错或跳过：猜词者点击屏幕右半区域</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">每轮游戏有固定时间限制（默认为60秒）</view>
+    </view>
+  </view>
+  
+  <view class="rules-card">
+    <view class="subtitle">计分规则</view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">猜对一个词：+1分</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">跳过一个词：不得分</view>
+    </view>
+    <view class="rule-item">
+      <view class="rule-num">•</view>
+      <view class="rule-text">时间结束时显示总得分</view>
+    </view>
+  </view>
+  
+  <view class="btn-container">
+    <button class="btn-primary" bindtap="goBack">返回</button>
+  </view>
+</view> 

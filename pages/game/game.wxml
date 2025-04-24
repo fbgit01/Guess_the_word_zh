@@ -1,0 +1,53 @@
+<view class="game-container">
+  <!-- 顶部信息栏 -->
+  <view class="top-bar">
+    <view class="pause-btn" bindtap="pauseGame">
+      <text class="iconfont icon-pause">||</text>
+    </view>
+    <view class="timer {{timeWarning ? 'warning' : ''}}">{{formatTime}}</view>
+    <view class="score">得分: {{score}}</view>
+    <view class="end-btn" bindtap="showEndConfirm">
+      <text class="iconfont icon-end">×</text>
+    </view>
+  </view>
+  
+  <!-- 词语卡片 -->
+  <view class="word-card {{animating ? 'flip' : ''}}">
+    <view class="word-text">{{currentWord}}</view>
+  </view>
+  
+  <!-- 操作区域 -->
+  <view class="action-area">
+    <!-- 左半屏：猜对 -->
+    <view class="action-left" bindtap="wordCorrect">
+      <view class="action-icon">✓</view>
+      <view class="action-text">猜对了</view>
+    </view>
+    
+    <!-- 右半屏：跳过 -->
+    <view class="action-right" bindtap="wordSkip">
+      <view class="action-icon">✗</view>
+      <view class="action-text">跳过</view>
+    </view>
+  </view>
+  
+  <!-- 暂停弹窗 -->
+  <view class="pause-modal" wx:if="{{isPaused}}">
+    <view class="pause-content">
+      <view class="subtitle">游戏暂停</view>
+      <button class="btn-primary" bindtap="resumeGame">继续游戏</button>
+      <button class="btn-warning" bindtap="endGameWithConfirm">结束游戏</button>
+      <button class="btn-grey" bindtap="quitGame">返回首页</button>
+    </view>
+  </view>
+  
+  <!-- 终止游戏确认弹窗 -->
+  <view class="pause-modal" wx:if="{{showEndGameConfirm}}">
+    <view class="pause-content">
+      <view class="subtitle">确认结束游戏?</view>
+      <view class="confirm-message">当前得分将被保存</view>
+      <button class="btn-warning" bindtap="endGame">确认结束</button>
+      <button class="btn-grey" bindtap="cancelEndGame">继续游戏</button>
+    </view>
+  </view>
+</view> 

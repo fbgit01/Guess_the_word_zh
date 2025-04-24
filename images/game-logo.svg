@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变背景 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9448bc"/>
+      <stop offset="1" stop-color="#7c71f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 圆形背景 -->
+  <circle cx="200" cy="200" r="190" fill="url(#paint0_linear)"/>
+  <circle cx="200" cy="200" r="180" fill="white" fill-opacity="0.2"/>
+  
+  <!-- 左侧对话泡泡 -->
+  <path d="M110 170C110 148.461 127.461 131 149 131H171C192.539 131 210 148.461 210 170V192C210 213.539 192.539 231 171 231H149L129 251V231C116.85 231 110 219.151 110 207V170Z" fill="white" stroke="#9448bc" stroke-width="8"/>
+  
+  <!-- 右侧对话泡泡 -->
+  <path d="M190 230C190 208.461 207.461 191 229 191H251C272.539 191 290 208.461 290 230V252C290 273.539 272.539 291 251 291H229L209 311V291C196.85 291 190 279.151 190 267V230Z" fill="white" stroke="#7c71f2" stroke-width="8"/>
+  
+  <!-- 问号符号 - 左泡泡 -->
+  <text x="145" y="190" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#9448bc">?</text>
+  
+  <!-- 惊叹号符号 - 右泡泡 -->
+  <text x="235" y="255" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#7c71f2">!</text>
+  
+  <!-- 小装饰圆圈 -->
+  <circle cx="120" cy="110" r="15" fill="white" fill-opacity="0.6"/>
+  <circle cx="150" cy="90" r="8" fill="white" fill-opacity="0.4"/>
+  <circle cx="280" cy="320" r="12" fill="white" fill-opacity="0.5"/>
+  <circle cx="310" cy="290" r="6" fill="white" fill-opacity="0.3"/>
+  
+  <!-- 游戏名称 - 疯狂猜词 -->
+  <g filter="url(#shadow)">
+    <text x="200" y="350" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">疯狂猜词</text>
+  </g>
+  
+  <!-- 上方的小旗帜装饰 -->
+  <path d="M190 90C190 85 195 80 200 80C205 80 210 85 210 90L205 110L200 100L195 110L190 90Z" fill="#ffcc33" stroke="#ff9933" stroke-width="2"/>
+</svg> 

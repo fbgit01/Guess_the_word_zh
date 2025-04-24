@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变背景和装饰 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="300" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9448bc"/>
+      <stop offset="1" stop-color="#7c71f2"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="150" y1="20" x2="150" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffcc33"/>
+      <stop offset="1" stop-color="#ff9933"/>
+    </linearGradient>
+    <filter id="shadow1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  
+  <!-- 主徽章形状 - 八角形 -->
+  <path d="M150 20
+           L196 40
+           L230 70
+           L260 115
+           L260 185
+           L230 230
+           L196 260
+           L150 280
+           L104 260
+           L70 230
+           L40 185
+           L40 115
+           L70 70
+           L104 40
+           Z" fill="url(#paint0_linear)" stroke="url(#paint1_linear)" stroke-width="8"/>
+  
+  <!-- 内圈装饰 -->
+  <circle cx="150" cy="150" r="100" fill="none" stroke="white" stroke-width="4" stroke-opacity="0.3" stroke-dasharray="10 5"/>
+  
+  <!-- 中心装饰 - 对话泡泡 -->
+  <g filter="url(#shadow1)">
+    <!-- 左侧对话泡泡 -->
+    <path d="M110 140C110 128.954 118.954 120 130 120H140C151.046 120 160 128.954 160 140V150C160 161.046 151.046 170 140 170H130L120 180V170C114.477 170 110 165.523 110 160V140Z" fill="white" stroke="#9448bc" stroke-width="4"/>
+    
+    <!-- 右侧对话泡泡 -->
+    <path d="M140 170C140 158.954 148.954 150 160 150H170C181.046 150 190 158.954 190 170V180C190 191.046 181.046 200 170 200H160L150 210V200C144.477 200 140 195.523 140 190V170Z" fill="white" stroke="#7c71f2" stroke-width="4"/>
+    
+    <!-- 问号和惊叹号 -->
+    <text x="130" y="155" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#9448bc">?</text>
+    <text x="165" y="185" font-family="Arial, sans-serif" font-size="35" font-weight="bold" fill="#7c71f2">!</text>
+  </g>
+  
+  <!-- 底部文字 -->
+  <text x="150" y="230" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">疯狂猜词</text>
+
+  <!-- 装饰星星 -->
+  <path d="M65 60L70 70L80 72L70 80L72 90L65 85L58 90L60 80L50 72L60 70Z" fill="#ffcc33" opacity="0.8">
+  </path>
+  <path d="M235 60L240 70L250 72L240 80L242 90L235 85L228 90L230 80L220 72L230 70Z" fill="#ffcc33" opacity="0.8">
+  </path>
+  <path d="M65 240L70 250L80 252L70 260L72 270L65 265L58 270L60 260L50 252L60 250Z" fill="#ffcc33" opacity="0.8">
+  </path>
+  <path d="M235 240L240 250L250 252L240 260L242 270L235 265L228 270L230 260L220 252L230 250Z" fill="#ffcc33" opacity="0.8">
+  </path>
+</svg> 

@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="custom-navbar">
+    <view class="back-btn" bindtap="goToHome">
+      <text class="back-icon">←</text>
+    </view>
+    <view class="navbar-title">游戏结果</view>
+    <view class="placeholder"></view>
+  </view>
+  
+  <view class="title">游戏结束！</view>
+  
+  <view class="score-container">
+    <view class="score-label">最终得分</view>
+    <view class="score-value">{{score}}</view>
+  </view>
+  
+  <view class="result-card">
+    <view class="result-title">猜对的词语 ({{correctWords.length}})</view>
+    <view class="word-list">
+      <view class="word-item" wx:for="{{correctWords}}" wx:key="index">
+        {{item}}
+      </view>
+      <view class="empty-tip" wx:if="{{correctWords.length === 0}}">
+        没有猜对的词语
+      </view>
+    </view>
+  </view>
+  
+  <view class="result-card">
+    <view class="result-title">跳过的词语 ({{skippedWords.length}})</view>
+    <view class="word-list">
+      <view class="word-item skipped" wx:for="{{skippedWords}}" wx:key="index">
+        {{item}}
+      </view>
+      <view class="empty-tip" wx:if="{{skippedWords.length === 0}}">
+        没有跳过的词语
+      </view>
+    </view>
+  </view>
+  
+  <view class="btn-container">
+    <button class="btn-primary" bindtap="playAgain">再来一局</button>
+    <button class="btn-grey" bindtap="goToHome">返回首页</button>
+    <button class="btn-secondary" open-type="share">分享成绩</button>
+  </view>
+</view> 

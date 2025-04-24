@@ -1,0 +1,88 @@
+/* rules.wxss */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #1e90ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  padding-top: 30rpx; /* 适应状态栏 */
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-icon {
+  color: white;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.placeholder {
+  width: 60rpx;
+}
+
+.rules-card {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin: 20rpx 0;
+  width: 85%;
+  box-shadow: 0 4rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.rule-item {
+  display: flex;
+  margin: 20rpx 0;
+  align-items: flex-start;
+}
+
+.rule-num {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #1e90ff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.rule-text {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.btn-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+
+.btn-container button {
+  width: 50%;
+}

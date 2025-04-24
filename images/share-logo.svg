@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变背景 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="600" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9448bc"/>
+      <stop offset="1" stop-color="#7c71f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="600" height="400" rx="20" fill="url(#paint0_linear)"/>
+  <rect x="15" y="15" width="570" height="370" rx="15" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  
+  <!-- 装饰元素 -->
+  <circle cx="100" cy="80" r="20" fill="white" fill-opacity="0.2"/>
+  <circle cx="500" cy="320" r="25" fill="white" fill-opacity="0.2"/>
+  <circle cx="450" cy="100" r="15" fill="white" fill-opacity="0.1"/>
+  <circle cx="150" cy="300" r="18" fill="white" fill-opacity="0.1"/>
+  
+  <!-- 对话泡泡图标 -->
+  <g transform="translate(120, 130) scale(0.8)" filter="url(#shadow)">
+    <!-- 左侧对话泡泡 -->
+    <path d="M110 170C110 148.461 127.461 131 149 131H171C192.539 131 210 148.461 210 170V192C210 213.539 192.539 231 171 231H149L129 251V231C116.85 231 110 219.151 110 207V170Z" fill="white" stroke="#9448bc" stroke-width="8"/>
+    
+    <!-- 右侧对话泡泡 -->
+    <path d="M190 230C190 208.461 207.461 191 229 191H251C272.539 191 290 208.461 290 230V252C290 273.539 272.539 291 251 291H229L209 311V291C196.85 291 190 279.151 190 267V230Z" fill="white" stroke="#7c71f2" stroke-width="8"/>
+    
+    <!-- 问号符号 - 左泡泡 -->
+    <text x="145" y="190" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#9448bc">?</text>
+    
+    <!-- 惊叹号符号 - 右泡泡 -->
+    <text x="235" y="255" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#7c71f2">!</text>
+  </g>
+  
+  <!-- 游戏名称 -->
+  <g filter="url(#shadow)">
+    <text x="400" y="170" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="40" font-weight="bold" fill="white" text-anchor="middle">疯狂猜词</text>
+  </g>
+  
+  <!-- 分享文字 -->
+  <g filter="url(#shadow)">
+    <text x="400" y="220" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">我在游戏中获得了</text>
+    <text x="400" y="260" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffcc33" text-anchor="middle">{SCORE}分</text>
+    <text x="400" y="300" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">快来挑战我吧！</text>
+  </g>
+  
+  <!-- 底部装饰和标签 -->
+  <rect x="15" y="350" width="570" height="30" rx="10" fill="white" fill-opacity="0.1"/>
+  <text x="300" y="370" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">休闲聚会必备神器</text>
+</svg> 
